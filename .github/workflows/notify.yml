@@ -19,8 +19,8 @@ jobs:
           SLACK_COLOR: warning
           SLACK_MESSAGE: dev環境へのデプロイを開始します
 
-      - name: Error
-        run: exit 1
+      - name: Sleep
+        run: sleep 30
 
       - name: Deploy Success
         if: success()
