@@ -14,13 +14,13 @@ jobs:
 
     steps:
       - name: Deploy Start
-        uses: rtCamp/action-slack-notify@v2
+        uses: rtCamp/action-slack-notify@v2.2.0
         env:
           SLACK_COLOR: warning
           SLACK_MESSAGE: dev環境へのデプロイを開始します
 
-      - name: Sleep
-        run: sleep 10
+      - name: Error
+        run: exit 1
 
       - name: Deploy Success
         if: success()
